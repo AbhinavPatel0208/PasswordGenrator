@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password generator</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  
+  <div class="main">
+    <div id="popup-message"></div>
+    <div class="box">
+      <span id="pass-Box">Testing</span>
+
+      <div class="row">
+        <div class="left">
+          Password Length
+        </div>
+        <div class="right">
+          <input type="number" id="total-char" max="30" min="2" value="2"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="upper-case">
+          <div class="left">
+            Contains Uppercase
+          </div>
+        </label>
+        <div class="right">
+          <input type="checkbox" id="upper-case" checked />
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="lower-case">
+          <div class="left">
+            Contains lowercase
+          </div>
+        </label>
+        <div class="right">
+          <input type="checkbox" id="lower-case"  />
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="numbers">
+          <div class="left">
+            Contains Numbers
+          </div>
+        </label>
+        <div class="right">
+          <input type="checkbox" id="numbers"  />
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="symbols">
+          <div class="left">
+            Contains Symbols
+          </div>
+        </label>
+        <div class="right">
+          <input type="checkbox" id="symbols"  />
+        </div>
+      </div>
+
+      <div class="row">
+        <button id="btn">
+          Ganerate
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

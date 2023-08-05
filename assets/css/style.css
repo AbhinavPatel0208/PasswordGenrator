@@ -1,0 +1,139 @@
+@font-face {
+  font-family: myfont; /* Give a name to the font family */
+  src: url("../Sheeping\ Dogs.ttf");
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: myfont;
+  letter-spacing: 2.5px;
+}
+
+input:focus-visible{
+  outline: 0;
+}
+
+.main{
+  background: linear-gradient(35deg, rgb(255, 0, 0), rgb(0, 0, 0));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box{
+  min-width: 400px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
+  background: linear-gradient(35deg, rgba(253, 182, 68, 0.582), rgba(253, 26, 26, 0.725));
+  border-radius: 5px;
+}
+
+#pass-Box{
+  width: 100%;
+  display: block;
+  background-color: black;
+  color: rgb(255, 0, 0);
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  color: black;
+  font-size: 26px;
+  /* font-weight: 600; */
+}
+
+label{
+  user-select: none;
+}
+
+#btn{
+  width: 100%;
+  font-size: 30px;
+  outline: 0;
+  border: 0;
+  padding: 10px;
+  background-color: #06080a;
+  color: rgba(255, 255, 255, 0.705);
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#total-char{
+  padding: 1px;
+  font-size: 20px;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  
+  background: rgb(241, 166, 166);
+  border-radius: 5px;
+}
+
+/* Custom styling for checkboxes */
+input[type="checkbox"] {
+  -webkit-appearance: none; /* Remove default checkbox appearance on Safari */
+  -moz-appearance: none; /* Remove default checkbox appearance on Firefox */
+  appearance: none; /* Remove default checkbox appearance on other browsers */
+  width: 20px; /* Set the width of the custom checkbox */
+  height: 20px; /* Set the height of the custom checkbox */
+  border: 2px solid #333; /* Add a border to the custom checkbox */
+  border-radius: 4px; /* Rounded corners for the custom checkbox */
+  margin-right: 5px; /* Add some spacing between the checkbox and the label */
+  cursor: pointer; /* Show a pointer cursor when hovering over the checkbox */
+  outline: none; /* Remove the focus outline on the checkbox */
+  position: relative; /* Position the checkbox relative to its label */
+}
+
+/* Styling for the checked state of the checkbox */
+input[type="checkbox"]:checked {
+  background-color: #333; /* Change the background color of the custom checkbox when checked */
+}
+
+/* Style the custom checkmark (✓) when the checkbox is checked */
+input[type="checkbox"]:checked::before {
+  content: "✓"; /* Display the checkmark when the checkbox is checked */
+  font-size: 14px; /* Adjust the font size of the checkmark */
+  line-height: 20px; /* Center the checkmark vertically inside the checkbox */
+  color: #fff; /* Set the color of the checkmark */
+  text-align: center; /* Center the checkmark horizontally inside the checkbox */
+  position: absolute; /* Position the checkmark relative to the checkbox */
+  top: 50%; /* Move the checkmark halfway down the checkbox */
+  left: 50%; /* Move the checkmark halfway to the right of the checkbox */
+  transform: translate(-50%, -50%); /* Center the checkmark exactly in the middle of the checkbox */
+}
+
+/* Styling for the label of the checkbox */
+label {
+  user-select: none; /* Prevent the label text from being selected */
+  
+}
+
+/* Add this CSS for the popup message styling */
+#popup-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#popup-message.show {
+  opacity: 1;
+}
